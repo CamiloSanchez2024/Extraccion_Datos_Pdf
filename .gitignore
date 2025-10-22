@@ -1,0 +1,14 @@
+# Entorno virtual
+venv/
+
+# Archivos Python compilados
+*.pyc
+__pycache__/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de salida / logs
+*.log
+*.csv
