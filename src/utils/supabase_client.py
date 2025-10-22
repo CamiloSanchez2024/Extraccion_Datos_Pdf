@@ -1,6 +1,6 @@
 from supabase import create_client, Client
 from typing import Dict, Optional
-from config import SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+from src.config import SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
 
 def obtener_cliente_supabase() -> Client:
     """Crea y retorna un cliente de Supabase"""

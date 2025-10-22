@@ -2,7 +2,7 @@ from pathlib import Path
 from PyPDF2 import PdfReader
 from pdf2image import convert_from_path
 import pytesseract
-from config import RUTA_TESSERACT, RUTA_POPPLER
+from src.config import RUTA_TESSERACT, RUTA_POPPLER
 
 def extraer_texto_pdf(ruta_pdf: Path) -> str:
     texto_completo = ""

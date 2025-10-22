@@ -1,5 +1,5 @@
 from pathlib import Path
-from config import CARPETA_PDFS
+from src.config import CARPETA_PDFS
 from utils.pdf_reader import extraer_texto_pdf
 from utils.data_extractor import extraer_datos_desde_texto
 from  utils.supabase_client import guardar_en_supabase
