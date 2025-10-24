@@ -24,7 +24,8 @@ def guardar_en_supabase(datos: Dict[str, str], tabla: str = "Datos") -> Optional
         datos_insertar = {
             "Folio": datos.get("folio"),
             "Nombre": datos.get("nombre"),
-            "Cedula": datos.get("cedula")
+            "Cedula": datos.get("cedula"),
+            "EntidadRemitente": datos.get("Entidad_Remitente")
         }
         
         # Insertar en Supabase

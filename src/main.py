@@ -1,8 +1,8 @@
 from pathlib import Path
-from src.config import CARPETA_PDFS
-from utils.pdf_reader import extraer_texto_pdf
-from utils.data_extractor import extraer_datos_desde_texto
-from  utils.supabase_client import guardar_en_supabase
+from .config import CARPETA_PDFS
+from .utils.pdf_reader import extraer_texto_pdf
+from .utils.data_extractor import extraer_datos_desde_texto
+from .utils.supabase_client import guardar_en_supabase
 
 def main():
     carpeta_pdf = Path(CARPETA_PDFS)
