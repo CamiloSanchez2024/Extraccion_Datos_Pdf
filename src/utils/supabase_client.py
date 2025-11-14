@@ -20,6 +20,15 @@ def guardar_en_supabase(datos: Dict[str, str], tabla: str = "Datos") -> Optional
     try:
         supabase = obtener_cliente_supabase()
         
+        folio = datos.get("folio")
+        if not folio:
+            print("✗ Folio no proporcionado, no se puede verificar existencia.")
+            return None
+
+        # ✅ Verificar si el documento ya existe antes de insertar
+        if verificar_documento_existe(folio, tabla):
+            print(f"⚠️ Documento con folio {folio} ya existe en Supabase.")
+            return None
         # Preparar datos para inserción - nombres exactos de tu tabla
         datos_insertar = {
             "Folio": datos.get("folio"),
